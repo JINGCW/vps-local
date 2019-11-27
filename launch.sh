@@ -1,9 +1,9 @@
 #!/bin/bash
 
 port=8080
-target_pid=lsof -i :$port | awk '{print $2}'|awk 'NR==2{print}'
+target_pid=`lsof -i :$port | awk '{print $2}'|awk 'NR==2{print}'`
 
-echo $target_pid
+echo running pid is: $target_pid
 if [ -n "$target_pid" ];then
   kill -9 $target_pid
 fi
