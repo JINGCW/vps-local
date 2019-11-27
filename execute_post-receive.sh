@@ -2,8 +2,8 @@
 
 echo current dir is: $PWD
 
-./launch.sh
+sudo bash launch.sh
 if [ $? -ne 0 ];then
   chmod +x launch.sh
-  ./launch.sh
+  sudo bash launch.sh
 fi
