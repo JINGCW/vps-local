@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo Try to execute some routine
+nohup go run up_down_files.go >/dev/null 2>&1 &
 
 echo Succeed!!!
